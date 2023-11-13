@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chi tiết sản phẩm</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="chitiet.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container">
+				<div class="logo">
+					<img src="img/logo.png" alt="Logo Cửa Hàng Sách">
+				</div>
+				<ul>
+					<li><a href="#">Trang chủ</a></li>
+					<li><a href="#">Danh mục</a></li>
+					<li><a href="#">Sản Phẩm</a></li>
+					<li><a href="#">Liên Hệ</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<h1>Cửa Hàng Sách Magic Book</h1>
+		</div>
+	</header>
+<main>
+	<section class="product-details">
+		<div class="container">
+			<div class="row">
+				<div class="product-image">
+                    <div class="anhsp">
+                        <div class="a">
+                            <img id="aa" src="img/Sách 1.jpg" width="100%" height="100%">
+                        </div>
+                        <div id="a" class="b">
+                            <button onclick="document.getElementById('aa').src='img/Sách 1.jpg'"><img src="img/Sách 1.jpg" width="100%"
+                                    height="100%"></button>
+                        </div>
+                        <div id="a" class="c">
+                            <button onclick="document.getElementById('aa').src='img/Sách 2.jpg'"><img src="img/Sách 2.jpg" width="100%"
+                                    height="100%"></button>
+                        </div>
+                        <div id="a" class="d">
+                            <button onclick="document.getElementById('aa').src='img/Sách 3.jpg'"><img src="img/Sách 3.jpg" width="100%"
+                                    height="100%"></button>
+                        </div>
+                        <div id="a" class="e">
+                            <button onclick="document.getElementById('aa').src='img/Sách 4.jpg'"><img src="img/Sách 4.jpg" width="100%"
+                                    height="100%"></button>
+                        </div>
+                    </div>
+				</div>
+				<div class="product-info">
+					<h2 class="namesp">Sách
+                        <div class="heart-rating">
+                            <span class="heart" onclick="rate(1)">&#10084;</span>
+                            <span class="heart" onclick="rate(2)">&#10084;</span>
+                            <span class="heart" onclick="rate(3)">&#10084;</span>
+                            <span class="heart" onclick="rate(4)">&#10084;</span>
+                            <span class="heart" onclick="rate(5)">&#10084;</span>
+                        </div>                         
+                    </h2>
+
+					<p class="price">$20.00</p>
+					<p class="description">Mô tả sản phẩm:</p>
+					<p class="description-text"> Cuốn sách này kể về một cuộc phiêu lưu đầy màu sắc và sâu sắc, nơi những nhân vật độc đáo và câu chuyện hấp dẫn kết hợp để mang lại trải nghiệm đọc độc đáo và không quên được.</p>
+                    <div class="qty">
+                        <button class="qty-button qty-minus">-</button>
+                        <input class="input-qty" type="text" value="1">
+                        <button class="qty-button qty-plus">+</button>
+                    </div>
+                    <div class="button">
+                        <button class="giohang">Thêm vào giỏ hàng</button>
+                        <button class="buy-button" onclick="buyProduct()">Mua ngay</button>
+                    </div>
+				</div>
+			</div>
+            <div class="thongtinchitiet">
+                <div class="product-description">
+                    <h2>Thông tin chi tiết về sản phẩm</h2>
+                        <ul>
+                            <li>Mã sản phẩm: MJFFK</li>
+                            <li>Nhà xuất bản</li>
+                            <li>Tác giả</li>
+                            <li>Tình trạng: Còn hàng</li>
+                        </ul>
+                </div>
+            </div>
+
+            <section class="related-products">
+                <div class="container">
+                  <h2 class="section-title">Sản phẩm khác</h2>
+                  <div class="product-grid">
+                    <div class="product">
+                      <a href="#"><img src="img/Sách 4.jpg" alt="Product"></a>
+                      <h3 class="product-name">Sách</h3>
+                      <p class="product-price">$25.00</p>
+                    </div>
+                    <div class="product">
+                      <a href="#"><img src="img/Sách 5.jpg" alt="Product"></a>
+                      <h3 class="product-name">Sách</h3>
+                      <p class="product-price">$30.00</p>
+                    </div>
+                    <div class="product">
+                      <a href="#"><img src="img/Sách 6.jpg" alt="Product"></a>
+                      <h3 class="product-name">Sách</h3>
+                      <p class="product-price">$50.00</p>
+                    </div>
+                    <div class="product">
+                      <a href="#"><img src="img/Sách 3.jpg" alt="Product"></a>
+                      <h3 class="product-name">Sách</h3>
+                      <p class="product-price">$15.00</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+		</div>
+	</section>
+</main>
+
+<footer>
+  <div class="footer-container">
+          <div class="footer-logo">
+              <img src="img/logo.png" alt="Logo Cửa Hàng Sách">
+          </div>
+          <div class="footer-info">
+              <p>Địa chỉ: 123 Đường ABC, Quận XYZ, TP ABC</p>
+              <p>Điện thoại: 0123-456-789</p>
+              <p>Email: info@example.com</p>
+          </div>
+          <div class="footer-social">
+              <a href="#"><img src="img/facebook-Icon.png" alt="Facebook"></a>
+              <a href="#"><img src="img/emaillogo.png" alt="Gmail"></a>
+              <a href="#"><img src="img/Instagram-Icon.png" alt="Instagram"></a>
+          </div>
+      </div>
+</footer>
+
+<script src="chitiet.js"></script>
+</body>
+</html>

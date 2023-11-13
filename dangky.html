@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6e6e6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-container h2 {
+            color: #51a3f6;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .register-button {
+            background-color: #51a3f6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .register-button:hover {
+            background-color: #4178a1;
+        }
+        .or-divider {
+            margin: 10px 0;
+            position: relative;
+            color: #888;
+        }
+
+        .or-divider::before,
+        .or-divider::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            border-top: 1px solid #888;
+        }
+
+        .or-divider::before {
+            left: 0;
+        }
+
+        .or-divider::after {
+            right: 0;
+        }
+        .login-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .login-icons img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Đăng Ký Tài Khoản</h2>
+        <form class="register-form" id="registerForm" onsubmit="return validateRegistration()">
+            <div class="form-group">
+                <label for="ho">Họ:</label>
+                <input type="text" id="ho" name="ho" required>
+            </div>
+            <div class="form-group">
+                <label for="ten">Tên:</label>
+                <input type="text" id="ten" name="ten" required>
+            </div>
+            <div class="form-group">
+                <label for="sdt">Số Điện Thoại:</label>
+                <input type="tel" id="sdt" name="sdt" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="matkhau">Mật Khẩu:</label>
+                <input type="password" id="matkhau" name="matkhau" required>
+            </div>
+            <div class="or-divider">Hoặc</div>
+
+        <div class="login-icons">
+            <img src="img/facebook-Icon.png" alt="Đăng nhập bằng Facebook" onclick="loginWithFacebook()">
+            <img src="img/emaillogo.png" alt="Đăng nhập bằng Email" onclick="loginWithEmail()">
+        </div>
+            <button type="submit" class="register-button">Đăng Ký</button>
+        </form>
+    </div>
+
+    <script>
+        function validateRegistration() {
+            var ho = document.getElementById("ho").value;
+            var ten = document.getElementById("ten").value;
+            var sdt = document.getElementById("sdt").value;
+            var email = document.getElementById("email").value;
+            var matkhau = document.getElementById("matkhau").value;
+
+            if (ho === "" || ten === "" || sdt === "" || email === "" || matkhau === "") {
+                alert("Vui lòng điền đầy đủ thông tin");
+            } else {
+                alert("Đăng ký thành công!");
+                document.getElementById("registerForm").reset();
+            }
+            // Chuyển hướng sang trang đăng nhập
+            window.location.href = "dangnhap.html";
+
+            // Ngăn chặn gửi form để tránh refresh trang
+            return false;
+        }
+        function loginWithFacebook() {
+            // Thực hiện đăng nhập bằng Facebook ở đây
+            alert('Đăng nhập bằng Facebook');
+        }
+
+        function loginWithEmail() {
+            // Thực hiện đăng nhập bằng Email ở đây
+            alert('Đăng nhập bằng Email');
+        }
+    </script>
+</body>
+</html>

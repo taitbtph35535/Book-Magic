@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6e6e6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #51a3f6;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #51a3f6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #4087c9;
+        }
+
+        .login-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .login-icons img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .or-divider {
+            margin: 10px 0;
+            position: relative;
+            color: #888;
+        }
+
+        .or-divider::before,
+        .or-divider::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            border-top: 1px solid #888;
+        }
+
+        .or-divider::before {
+            left: 0;
+        }
+
+        .or-divider::after {
+            right: 0;
+        }
+
+        .register-link {
+            font-size: 14px; /* Thêm thuộc tính font-size để giảm kích thước chữ */
+            margin-top: 10px; /* Thêm margin-top để tạo khoảng cách với nút đăng nhập */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Đăng Nhập</h2>
+        <form class="login-form" id="loginForm" onsubmit="return validateLogin()">
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="or-divider">Hoặc</div>
+
+        <div class="login-icons">
+            <img src="img/facebook-Icon.png" alt="Đăng nhập bằng Facebook" onclick="loginWithFacebook()">
+            <img src="img/emaillogo.png" alt="Đăng nhập bằng Email" onclick="loginWithEmail()">
+        </div>
+
+            <button type="submit" class="login-button">Đăng Nhập</button>
+        </form>
+
+        <div class="register-link">
+            BẠN CHƯA CÓ TÀI KHOẢN. <a href="dangky.html">ĐĂNG KÝ TẠI ĐÂY.</a>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            // Hàm kiểm tra và xử lý đăng nhập
+
+            // Giả sử đăng nhập thành công
+            alert("Đăng nhập thành công!");
+
+            // Chuyển hướng sang trang chủ
+            window.location.href = "trangchu.html";
+
+            // Ngăn chặn gửi form để tránh refresh trang
+            return false;
+        }
+
+        function loginWithFacebook() {
+            // Thực hiện đăng nhập bằng Facebook ở đây
+            alert('Đăng nhập bằng Facebook');
+        }
+
+        function loginWithEmail() {
+            // Thực hiện đăng nhập bằng Email ở đây
+            alert('Đăng nhập bằng Email');
+        }
+    </script>
+</body>
+</html>
